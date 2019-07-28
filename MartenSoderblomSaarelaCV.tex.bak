@@ -1,0 +1,234 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, letterpaper]{article}
+\usepackage{fontspec} 
+
+\usepackage{setspace}
+%\usepackage{xltxtra} %This package is currently causing problems, but it is important as it enables spacing of CJK punctuation marks.
+\usepackage[fallback]{xeCJK}
+
+\newcommand{\mainfontCJK}[0]{HanaMinA}
+
+
+\setCJKmainfont[Scale=0.9%86
+]
+{\mainfontCJK}
+\setCJKfallbackfamilyfont{\CJKrmdefault}[%Scale=0.9%85
+]
+{NanumMyeongjo}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+
+
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{letterpaper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+\setmonofont[Scale=0.8]{Monaco}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, %<---- This was not working so I disabled it (6/4/2013)
+bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Mårten Söderblom Saarela - CV},
+	pdfauthor={Mårten Söderblom Saarela},
+	pdfproducer={}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Mårten \textsc{Söderblom Saarela} 馬騰}\\[1cm]
+211 Jones Hall
+\\
+Princeton, NJ 08544\\
+USA\\[.2cm]
+Phone: 973-687-0769\\[.2cm]
+Email: \href{mailto:msoderbl@princeton.edu}{msoderbl@princeton.edu}\\
+%\textsc{url}: \href{http://www.ias.edu/spfeatures/einstein/}{http://www.ias.edu/spfeatures/einstein/}\\ 
+\vfill
+ Born:  September 5, 1985---Stockholm, Sweden\\
+Nationality:  Swedish
+
+%\hrule
+\section*{Current position}
+\emph{PhD Candidate}, East Asian Studies Department, Princeton University 
+
+%\hrule
+\section*{Areas of specialization}
+Chinese history • Qīng empire (1636--1911)
+
+%%%\hrule
+%\section*{Appointments held}
+%\noindent
+%\years{1903-1908}Swiss Patent Office, Bern\\
+%\years{1908-1911}University of Bern\\
+%\years{1911-1912}University of Zürich\\
+%\years{1912-1914}Charles University of Prague\\
+%\years{1914-1932}Prussian Academy of Sciences, Berlin\\
+%\years{1920-1930}University of Leiden\\
+%\years{1932-1955}Institute for Advanced Study, Princeton
+
+%\hrule
+\section*{Education}
+\noindent
+\years{2010--}• \textsc{p}h\textsc{d} (expected May, 2015) East Asian Studies, Princeton University\\
+\emph{Examination Fields:}\\
+``Late Imperial China'' (major), ``Pre-Modern Korea'' (minor), ``Early Modern Japan'' (minor)\\
+\years{2014}Special Researcher, Kyujanggak, Seoul National University\\
+\years{2014}Visiting Fellow, Institute for Advanced Study on Asia, University of Tokyo\\
+\years{2014}Academia Sinica Winter Institute (``Into the Core of Traditional Chinese Scholarship'')\\
+\years{2013--14}Senior Visiting Student, Peking University\\
+\years{2013}• \textsc{ma} East Asian Studies, Princeton University\\
+\years{2012--13}Exchange Scholar Program, Harvard University\\
+\years{2011}Second year Japanese language, Hokkaido International Foundation (Hakodate)\\
+\years{2010}First year Japanese language, Beloit College\\
+\years{2010}Korean language course (exchange student), Hankuk University of Foreign Studies (Seoul)\\
+\years{2008--09}• \textsc{ma} Sinology, \textsc{soas} (London)\\
+\years{2007--08}Advanced course in Modern Chinese language, Tongji University (Shanghai)\\
+\years{2005--07, 2009}• \textsc{ba} French (Chinese, Korean minor), Stockholm University\\
+\years{2004--05}French literature and linguistics, Université de la Sorbonne-Nouvelle--Paris 3\\
+\years{2004}French language course, Université Charles-de-Gaulle--Lille 3\\
+
+%\hrule
+\section*{Teaching Experience}
+\noindent
+\years{Fall 2014} Teaching Assistant (``History of East Asia to 1800''), Departments of History and East Asian Studies, Princeton University
+
+%\hrule
+\section*{Languages}
+
+Swedish (native)\\
+%English (fluent)\\
+French (fluent)\\
+Standard Mandarin (fluent)\\
+Korean (advanced)\\
+Classical Chinese (reading)\\
+German (reading)\\
+Japanese (reading)\\
+Manchu (reading)\\
+Classical Mongolian (reading)\\
+Latin (elementary)\\
+Russian (elementary)
+
+
+
+%\hrule
+\section*{Grants, honors \& awards}
+\noindent
+\years{2014}Seoul National University International Center for Korean Studies Archives Travel Grant\\
+\years{2013}1\textsuperscript{st} Prize for Conference Paper, Zhōngguó Rénmín Dàxué Qīngshǐ Yánjiū Suǒ Dì Bā Jiè Qīngnián Xuézhě Lùntán 中国人民大学清史研究所第八届青年学者论坛\\
+\years{2013--14}Chinese Government Scholarship\\
+\years{2011}Tsang Yee and Wai Kwan Chan So P*71 Fellowship for Chinese History and Culture, Princeton University\\
+\years{2010--15}University Fellowship, Princeton University\\
+\years{2010}Merit grant from the Center for Human Values, Princeton University\\
+\years{2010}Director's Scholarship, Beloit College\\
+\years{2010}Stockholm University Scholarship for Student Mobility\\
+\years{2010}Global Exchange Scholarship, Hankuk University of Foreign Studies\\
+\years{2008--09}\textsc{hsbc soas} Scholarship\\
+\years{2007--08}Bilateral scholarship for study in China, Swedish Institute
+
+%\hrule
+\section*{Publications \& talks}
+
+\subsection*{Journal articles}
+\noindent
+\years{2014} ``Shape and Sound: Organizing Dictionaries in Late Imperial China,'' \emph{Dictionaries: Journal of the Dictionary Society of North America} (in press)\\
+
+\noindent
+\years{2014} ``The Qing Tradition and the Return of Manchu Lexicography to China (1970s--1990s): The Example of Alphabetical Order,'' \emph{Historiographia Linguistica} 41.2/3 (in press)\\
+
+\noindent
+\years{2014} ``\emph{Shíèr zìtóu} yǔ Qīngdài Mǎnwén yǔxué'' 《十二字头》与清代满文语学 (The ``Twelve Heads'' and Manchu Language-Studies in the Qīng Period), \emph{Qīngshǐ yánjiū} (in press)\\
+
+\noindent
+\years{2014} ``\emph{Shier zitou jizhu} (Collected notes on the twelve heads): A Recently Discovered Work by Shen Qiliang,'' \emph{Saksaha} (in press)\\
+
+\noindent
+\years{2010}``Scholarly Discourse in Chen Li's (1810--1882) Letters,'' \emph{Sungkyun Journal of East Asian Studies} 10.2: 169--89\\
+
+\subsection*{Book chapters}
+
+\noindent
+\years{2014}``The Manchu Script and Information Management: Some Aspects of Qing China's Great Encounter with Alphabetic Literacy,''  in \emph{Rethinking East Asian Languages, Vernaculars, and Literacies, 1000--1919}, edited by Benjamin A.\ Elman, 169--197 (Leiden: Brill)\\
+
+\subsection*{Book reviews}
+\noindent
+\years{2012}``\textsc{review}: Georg Lehner, \emph{China in European Encyclopaedias, 1700--1850},'' \emph{Sungkyun Journal of East Asian Studies} 12.1: 96--9\\
+
+\subsection*{Conference presentations}
+\noindent
+\years{2014}``On Alphabetical Order in Manchu Dictionaries of the Qīng Period'' (Association for Asian Studies Annual Conference, Philadelphia)
+
+\years{2013}``\emph{Shíèr zìtóu} yǔ Qīngdài Mǎnwén yǔxué'' 《十二字头》与清代满文语学 (The ``Twelve Heads'' and Manchu Language-Studies in the Qīng Period; Zhōngguó Rénmín Dàxué Qīngshǐ Yánjiū Suǒ Dì Bā Jiè Qīngnián Xuézhě Lùntán 中国人民大学清史研究所第八届青年学者论坛)
+
+\years{2013}``Organizing Dictionaries in Late Imperial China'' (Dictionary Society of North America 19\textsuperscript{th} Biennial Conference, University of Georgia%, May 22--25, 2013
+)
+
+\years{2013}``Alphabetic Principles and Chinese Characters in Qīng Dictionaries'' (22\textsuperscript{nd} Annual Graduate Student Conference on East Asia, Columbia University%, February 15--16, 2013
+)
+
+\years{2012}``Multilingual Phonology in the Expanding Qīng Empire, 1683--1787'' (China Undisciplined, \textsc{ucla}%, May 18--19, 2012
+)\\
+\years{2011}``Knowledge of Inner Asia in Chosŏn Korea'' (History, Memory and the Politics of Memorialization in Contemporary Korea, Leiden University%, October 24--27, 2011
+)\\
+
+
+%\vspace{1cm}
+\vfill{}
+%%\hrulefill
+
+\begin{center}
+{\scriptsize  Last updated: \today\- •\- 
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in \href{http://nitens.org/taraborelli/cvtex}{
+%\fontspec{Times New Roman}
+\XeTeX }%\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+%\href{http://nitens.org/taraborelli/cvtex}{http://nitens.org/taraborelli/cvtex}
+}
+\end{center}
+
+\end{document}
